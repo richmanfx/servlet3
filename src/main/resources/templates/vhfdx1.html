@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Скрапинг vhfdx.ru</title>
+    <link rel="stylesheet" type="text/css" href="../../../servlet3-1.1/css/apps.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/apps.css">
+</head>
+<body>
+    <h5>
+        Информация по квадратам участников соревнований с сайта VHFDX.RU
+    </h5>
+    <p>
+        Позывной: ${call}
+
+        [#assign keys = hash?keys]
+        [#list keys as key]
+    	    ${call} = ${hash[key]}<br />
+        [/#list]
+</body>
+</html>

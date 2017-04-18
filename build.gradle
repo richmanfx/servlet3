@@ -1,0 +1,29 @@
+group 'ru.r5am'
+version '1.1'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+//archivesBaseName = 'Servlet3'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    jcenter()
+}
+
+dependencies {
+    compile 'org.freemarker:freemarker:+'
+    compile 'javax:javaee-web-api:+'
+    testCompile 'org.testng:testng:+'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.4.1'
+}

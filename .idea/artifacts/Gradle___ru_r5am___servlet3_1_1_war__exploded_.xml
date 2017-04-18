@@ -1,0 +1,26 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Gradle : ru.r5am : servlet3-1.1.war (exploded)">
+    <output-path>$PROJECT_DIR$/build/libs/exploded/servlet3-1.1.war</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$">
+        <manifest>TWFuaWZlc3QtVmVyc2lvbjogMS4wDQoNCg==</manifest>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/build/libs/exploded/servlet3-1.1.war/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="servlet3_main/web/Web Gradle : servlet3-1.1.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="servlet3_main" />
+          <element id="dir-copy" path="$PROJECT_DIR$/build/resources/main" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: org.freemarker:freemarker:2.3.26-incubating" />
+          <element id="library" level="project" name="Gradle: javax:javaee-web-api:7.0" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

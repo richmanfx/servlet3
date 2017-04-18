@@ -1,0 +1,92 @@
+
+body {
+    background-color: #555555;
+    background-image: url(../images/r5am-fone-2.jpg);	/* Фоновое изображение */
+    font-family: Times;
+	font-size: 25pt;
+	text-align: left; 
+    hyphens: auto;          /* Перенос слов. в Chrome не работает */
+	line-height: 1.2;
+}
+
+div { 
+    padding: 20px; 					/* Поля вокруг текста */
+}
+
+
+table {
+    border: 3px double;
+    border-style: dotted;
+    border-color: white;
+    border-radius: 30px
+}
+
+h1 {
+    color: red; 						/* Цвет заголовка */
+    font-size: 4em; 					/* Размер шрифта в пунктах */
+    /* font-family: Georgia, Times, serif; */ 		/* Семейство шрифтов */
+    font-weight: normal; 				/* Нормальное начертание текста */
+}
+
+h2 {
+    color: yellow;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+h3 {
+    color: white;
+    font-size: 25pt;
+}
+
+h4 {
+    color: orange;
+    text-align: center;
+    font-size: 18pt;
+}
+
+dd {
+    color: white;
+}
+
+myteg1 {
+    font-size: 1.5em;
+}
+
+/*
+myteg2 {
+    font-size: 30pt;
+}
+*/
+
+a {
+    font-size: 1em;
+}
+
+a:link {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a:visited {
+    color: #ffffff;
+}
+
+a:active {
+    color: #0000ff;
+}
+
+a:hover {
+    text-decoration: underline;
+    /*	color: #6be400	*/
+    color: orange;
+}
+
+.list {
+    list-style-type: none;
+}
+
+.ramka {
+    border:3px dotted #777; /* Ширина вид и цвет рамки */
+    border-radius:30px; /* Радиус скругления углов*/
+}
