@@ -42,6 +42,4 @@ public class ServletVhfdx extends HttpServlet {
         response.getWriter().println(page);
 
     }
-
-
 }

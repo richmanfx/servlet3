@@ -13,8 +13,8 @@ public class Vhfdx {
     public Map<String, Object> vhfdxGrab() {
 
         Map<String, Object> pageContext = new HashMap<>();
-        pageContext.put("call", "RD3BA");
-        pageContext.put("call", "R5AM");
+        pageContext.put("call1", "RD3BA");
+        pageContext.put("call2", "R5AM");
 
         return pageContext;
     }
