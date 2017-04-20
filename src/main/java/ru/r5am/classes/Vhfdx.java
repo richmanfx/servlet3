@@ -1,6 +1,8 @@
 package ru.r5am.classes;
 
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -13,8 +15,12 @@ public class Vhfdx {
     public Map<String, Object> vhfdxGrab() {
 
         Map<String, Object> pageContext = new HashMap<>();
-        pageContext.put("call1", "RD3BA");
-        pageContext.put("call2", "R5AM");
+        List<String> calls = new LinkedList<>();
+        calls.add("RD3BA");
+        calls.add("R5AM");
+        calls.add("RA3ASD");
+
+        pageContext.put("calls", calls);
 
         return pageContext;
     }

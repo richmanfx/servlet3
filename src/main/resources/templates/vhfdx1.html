@@ -7,11 +7,14 @@
     <link rel="stylesheet" type="text/css" href="../../../css/apps.css">
 </head>
 <body>
-    <h7>
+    <div align="center">
         Информация по квадратам участников соревнований с сайта VHFDX.RU
-    </h7>
+    </div>
     <p>
-        ${call1} <br>
-        ${call2} <br>
+
+        <#list calls as call>
+    	    ${call} <br>
+        </#list>
+
 </body>
 </html>
