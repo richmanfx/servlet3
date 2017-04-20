@@ -38,7 +38,7 @@ public class ServletVhfdx extends HttpServlet {
 
         response.setContentType("text/html");
         response.setCharacterEncoding("UTF8");
-        String page = PageGenerator.getPage("vhfdx1.html", pageContext);
+        String page = PageGenerator.getPage("vhfdx1.ftl", pageContext);
         response.getWriter().println(page);
 
     }
