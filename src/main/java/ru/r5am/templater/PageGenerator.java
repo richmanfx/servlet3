@@ -26,7 +26,7 @@ public class PageGenerator {
             final Template templateName = cfg.getTemplate(filename);
             templateName.process(data, outputStream);
         } catch (IOException | TemplateException e) {
-            System.err.println("Не нашёлся темплейт-файл: " + filename);
+            System.err.println("Ошибка при выводе в темплейт-файл: " + filename);
             e.printStackTrace();
         }
         return outputStream.toString();

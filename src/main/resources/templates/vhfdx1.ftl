@@ -8,13 +8,20 @@
 </head>
 <body>
     <div align="center">
-        Информация по квадратам участников соревнований с сайта VHFDX.RU
-    </div>
-    <p>
-
-        <#list calls as call>
-    	    ${call} <br>
+        <table border="1">
+        <caption>
+            Информация по квадратам участников соревнований с сайта VHFDX.RU
+        </caption>
+        <tr>
+            <th>Позывной</th>
+            <th>Квадрат</th>
+            <th>Диапазоны</th>
+            <th>Дополнительная информация</th>
+        </tr>
+        <#list tableStrings as tableString>
+    	    ${tableString}
         </#list>
-
+        </table>
+    </div>
 </body>
 </html>

@@ -21,6 +21,11 @@ repositories {
 dependencies {
     compile 'org.freemarker:freemarker:+'
     compile 'javax:javaee-web-api:+'
+    compile 'com.codeborne:selenide:+'
+    compile 'org.apache.logging.log4j:log4j-slf4j-impl:+'
+    compile 'org.apache.logging.log4j:log4j-core:+'
+    compile 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:+'
+    compile 'com.fasterxml.jackson.core:jackson-databind:+'
     testCompile 'org.testng:testng:+'
 }
 
