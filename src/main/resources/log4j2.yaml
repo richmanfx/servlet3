@@ -1,0 +1,20 @@
+Configutation:
+  name: DefaultLogConfiguration
+  Appenders:
+    Console:
+      name: STDOUT
+      target: SYSTEM_OUT
+      PatternLayout:
+#        pattern: "%d{HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"
+        pattern: "%d{HH:mm:ss XXX} %-5p %c.java:%L - %m%n"
+#    File:
+#      name: FILE
+#      fileName: "logs/zoer.log"
+#      PatternLayout:
+#        pattern: "%d{HH:mm:ss} %-5p %c{1.}.java:%L - %m%n"
+  Loggers:
+      Root:
+        level: info
+        AppenderRef:
+          - ref: "STDOUT"
+#          - ref: "FILE"
