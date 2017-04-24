@@ -6,7 +6,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 
+import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -35,7 +37,7 @@ public class Vhfdx {
         timeInit(log);
         log.info("Начало работы.");
 
-        browserInitialize(widthBrowser, heightBrowser);
+        browserInitialize(widthBrowser, heightBrowser, log);
 
         // Открыть страницу
         open(pageLink);
@@ -93,7 +95,20 @@ public class Vhfdx {
      * @param width Ширина окна браузера.
      * @param height Высота окна браузера.
      */
-    private static void  browserInitialize(int width, int height) {
+    private void browserInitialize(int width, int height, Logger logger) throws IOException {
+
+        // Если мы в Windows
+        String os = System.getProperty("os.name").toLowerCase();
+        if (os.contains("win")) {
+            ClassLoader classLoader = getClass().getClassLoader();
+            URL url = classLoader.getResource("webdrivers" + File.separator + "chromedriver.exe");
+            if (url == null) {
+                logger.error("Не обнаружен файл \"chromedriver.exe\"!");
+            } else {
+                System.setProperty("webdriver.chrome.driver", url.getPath());
+            }
+        }
+
         Configuration.browserSize = String.format("%dx%d", width, height);
         Configuration.browser = "chrome";
     }
