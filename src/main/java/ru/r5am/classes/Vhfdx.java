@@ -107,10 +107,23 @@ public class Vhfdx {
             } else {
                 System.setProperty("webdriver.chrome.driver", url.getPath());
             }
+
+            url = classLoader.getResource("webdrivers" + File.separator + "phantomjs.exe");
+            if (url == null) {
+                logger.error("Не обнаружен файл \"phantomjs.exe\"!");
+            } else {
+                System.setProperty("webdriver.phantomjs.driver", url.getPath());
+                System.setProperty("browser", "phantomjs");
+            }
+
+            // phantomjs.binary.path
         }
 
+
+
+
         Configuration.browserSize = String.format("%dx%d", width, height);
-        Configuration.browser = "chrome";
+        Configuration.browser = "phantomjs";
     }
 
 

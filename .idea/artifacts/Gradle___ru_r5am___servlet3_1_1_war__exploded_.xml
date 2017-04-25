@@ -19,64 +19,65 @@
         <element id="directory" name="lib">
           <element id="library" level="project" name="Gradle: org.freemarker:freemarker:2.3.26-incubating" />
           <element id="library" level="project" name="Gradle: javax:javaee-web-api:7.0" />
+          <element id="library" level="project" name="Gradle: com.codeborne:selenide:4.4.2" />
+          <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-slf4j-impl:2.8.2" />
+          <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-core:2.8.2" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.9.0.pr3" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.9.0.pr3" />
+          <element id="library" level="project" name="Gradle: org.apache.httpcomponents:httpcore:4.4.6" />
+          <element id="library" level="project" name="Gradle: org.seleniumhq.selenium:selenium-java:3.3.1" />
+          <element id="library" level="project" name="Gradle: com.google.code.gson:gson:2.8.0" />
+          <element id="library" level="project" name="Gradle: com.google.guava:guava:21.0" />
+          <element id="library" level="project" name="Gradle: net.lightbody.bmp:browsermob-core:2.1.4" />
+          <element id="library" level="project" name="Gradle: commons-codec:commons-codec:1.10" />
+          <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.24" />
+          <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-api:2.8.2" />
           <element id="library" level="project" name="Gradle: org.yaml:snakeyaml:1.17" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.codeborne/selenide/4.4.2/833d7465f623f32fa2ab4284d8b980b164bc1f10/selenide-4.4.2.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-slf4j-impl/2.8.2/36bc2a99b86be26ccdc51fe288458dc712d280c1/log4j-slf4j-impl-2.8.2.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.8.2/979fc0cf8460302e4ffbfe38c1b66a99450b0bb7/log4j-core-2.8.2.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/2.9.0.pr2/d78c9ecaea3fed4d55d0da1a9a35c6585bd28af6/jackson-dataformat-yaml-2.9.0.pr2.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.9.0.pr2/2d81a95387c540ee9c6fd9ad6ad5bee4fa2412e/jackson-databind-2.9.0.pr2.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.6/e3fd8ced1f52c7574af952e2e6da0df8df08eb82/httpcore-4.4.6.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-java/3.3.1/eeca9dd7cb20d8a98858ef51d675c57ca8ce9cb4/selenium-java-3.3.1.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.0/c4ba5371a29ac9b2ad6129b1d39ea38750043eff/gson-2.8.0.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/21.0/3a3d111be1be1b745edfa7d91678a12d7ed38709/guava-21.0.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.lightbody.bmp/browsermob-core/2.1.4/a7b887c19fdc49d6baa653feea9d5e0a523fcf40/browsermob-core-2.1.4.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.codeborne/phantomjsdriver/1.4.1/652a6c6d42a00e1dbd5cf05d35b0e690c3621824/phantomjsdriver-1.4.1.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.10/4b95f4897fa13f2cd904aee711aeafc0c5295cd8/commons-codec-1.10.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.24/3f6b4bd4f8dbe8d4bea06d107a3826469b85c3e9/slf4j-api-1.7.24.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.8.2/e590eeb783348ce8ddef205b82127f9084d82bf3/log4j-api-2.8.2.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.9.0.pr2/8e85d13e132c68045850f9d99fc89f1a434a97ee/jackson-core-2.9.0.pr2.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.9.0.pr2/de9795efb880669caace5d3991de81ca197b69fc/jackson-annotations-2.9.0.pr2.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-chrome-driver/3.3.1/7f3cc4850d2bd72145a6deb54267050cad314297/selenium-chrome-driver-3.3.1.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-edge-driver/3.3.1/c1229659187677d66bf04f0786838fbd5a9605d6/selenium-edge-driver-3.3.1.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-firefox-driver/3.3.1/45127aa054bbedcc39b637ea7240811b4d24ef6a/selenium-firefox-driver-3.3.1.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-ie-driver/3.3.1/1b376901c6fc2ac3bbe32677fba4c6ee7bd28818/selenium-ie-driver-3.3.1.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-opera-driver/3.3.1/ca2fc03ac3990a5ad4c227f89890891d1862667/selenium-opera-driver-3.3.1.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/htmlunit-driver/2.24/ece82c09dc43ae868f94f4bed7cf1e81233e493/htmlunit-driver-2.24.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.lightbody.bmp/littleproxy/1.1.0-beta-bmp-15/6b8518132d498a05aaf2ad09b77b6a543bf24026/littleproxy-1.1.0-beta-bmp-15.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/dnsjava/dnsjava/2.1.7/a1ed0a251d22bf528cebfafb94c55e6f3f339cf/dnsjava-2.1.7.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/jcl-over-slf4j/1.7.22/86ceac14535af5a42c8fb0d06d79b925dd3cb263/jcl-over-slf4j-1.7.22.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jcraft/jzlib/1.1.3/c01428efa717624f7aabf4df319939dda9646b2d/jzlib-1.1.3.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-all/4.0.42.Final/8b504f4a88c636839d47cffe303ba613792762ed/netty-all-4.0.42.Final.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk15on/1.56/a153c6f9744a3e9dd6feab5e210e1c9861362ec7/bcprov-jdk15on-1.56.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.56/4648af70268b6fdb24674fb1fd7c1fcc73db1231/bcpkix-jdk15on-1.56.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.lightbody.bmp/mitm/2.1.4/25d79bd7d247120b7beadf691e7c76093ce54705/mitm-2.1.4.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-support/3.4.0/900176a308fbf55d741a168a3beac8527caf1c1/selenium-support-3.4.0.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sourceforge.htmlunit/htmlunit/2.24/e69abf8a4b5d13a9fd5c353c1557ef59f1570a8e/htmlunit-2.24.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-exec/1.3/8dfb9facd0830a27b1b5f29f84593f0aeee7773b/commons-exec-1.3.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna-platform/4.1.0/23457ad1cf75c2c16763330de5565a0e67b4bc0a/jna-platform-4.1.0.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/4.1.0/1c12d070e602efd8021891cdd7fd18bc129372d4/jna-4.1.0.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/2973d150c0dc1fefe998f834810d68f278ea58ec/junit-4.12.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/xalan/xalan/2.7.2/d55d3f02a56ec4c25695fe67e1334ff8c2ecea23/xalan-2.7.2.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.5.2/22b4c53dd9b6761024258de8f9240c3dce6ea368/httpmime-4.5.2.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sourceforge.htmlunit/htmlunit-core-js/2.23/6ade18a1568c4da458ca197aaa6d3fe213c69928/htmlunit-core-js-2.23.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sourceforge.htmlunit/neko-htmlunit/2.24/db21c784490b068c91eded812a68c199362872e9/neko-htmlunit-2.24.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sourceforge.cssparser/cssparser/0.9.21/5238960c5931a52759f222761610052a0cbb2615/cssparser-0.9.21.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.5/2852e6e05fbb95076fc091f6d1780f1f8fe35e0f/commons-io-2.5.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.websocket/websocket-client/9.2.20.v20161216/14b2174ca8967e11e58e33af7e92a1d4214ca66a/websocket-client-9.2.20.v20161216.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/xalan/serializer/2.7.2/24247f3bb052ee068971393bdb83e04512bb1c3c/serializer-2.7.2.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/xerces/xercesImpl/2.11.0/9bb329db1cfc4e22462c9d6b43a8432f5850e92c/xercesImpl-2.11.0.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.w3c.css/sac/1.3/cdb2dcb4e22b83d6b32b93095f644c3462739e82/sac-1.3.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-util/9.2.20.v20161216/b211d57761c6d5a249708290e617deb9dda2cdad/jetty-util-9.2.20.v20161216.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-io/9.2.20.v20161216/cb27789ea103b78f5c7bcf4c33627f8dc23b8ddc/jetty-io-9.2.20.v20161216.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.websocket/websocket-common/9.2.20.v20161216/f31a0535a1c71fe34dfafd2a6d3b2f41b3d8a110/websocket-common-9.2.20.v20161216.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/xml-apis/xml-apis/1.4.01/3789d9fada2d3d458c4ba2de349d48780f381ee3/xml-apis-1.4.01.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.websocket/websocket-api/9.2.20.v20161216/261ca2003f28259a9b83556af700531665ffefb4/websocket-api-9.2.20.v20161216.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-api/3.4.0/bf91d238e6eb07f8496ccb61e12e2c868d2bc7e9/selenium-api-3.4.0.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-remote-driver/3.4.0/2593094fccb4f0317e211674ebfc22fb049c043a/selenium-remote-driver-3.4.0.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.3/d1577ae15f01ef5438c5afc62162457c00a34713/httpclient-4.5.3.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.5/6c6c702c89bfff3cd9e80b04d668c5e190d588c6/commons-lang3-3.5.jar" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.9.0.pr3" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.9.0.pr3" />
+          <element id="library" level="project" name="Gradle: org.seleniumhq.selenium:selenium-chrome-driver:3.3.1" />
+          <element id="library" level="project" name="Gradle: org.seleniumhq.selenium:selenium-edge-driver:3.3.1" />
+          <element id="library" level="project" name="Gradle: org.seleniumhq.selenium:selenium-firefox-driver:3.3.1" />
+          <element id="library" level="project" name="Gradle: org.seleniumhq.selenium:selenium-ie-driver:3.3.1" />
+          <element id="library" level="project" name="Gradle: org.seleniumhq.selenium:selenium-opera-driver:3.3.1" />
+          <element id="library" level="project" name="Gradle: org.seleniumhq.selenium:htmlunit-driver:2.24" />
+          <element id="library" level="project" name="Gradle: net.lightbody.bmp:littleproxy:1.1.0-beta-bmp-15" />
+          <element id="library" level="project" name="Gradle: dnsjava:dnsjava:2.1.7" />
+          <element id="library" level="project" name="Gradle: org.slf4j:jcl-over-slf4j:1.7.22" />
+          <element id="library" level="project" name="Gradle: com.jcraft:jzlib:1.1.3" />
+          <element id="library" level="project" name="Gradle: io.netty:netty-all:4.0.42.Final" />
+          <element id="library" level="project" name="Gradle: org.bouncycastle:bcprov-jdk15on:1.56" />
+          <element id="library" level="project" name="Gradle: org.bouncycastle:bcpkix-jdk15on:1.56" />
+          <element id="library" level="project" name="Gradle: net.lightbody.bmp:mitm:2.1.4" />
+          <element id="library" level="project" name="Gradle: org.seleniumhq.selenium:selenium-support:3.4.0" />
+          <element id="library" level="project" name="Gradle: net.sourceforge.htmlunit:htmlunit:2.24" />
+          <element id="library" level="project" name="Gradle: org.apache.commons:commons-exec:1.3" />
+          <element id="library" level="project" name="Gradle: net.java.dev.jna:jna-platform:4.1.0" />
+          <element id="library" level="project" name="Gradle: commons-logging:commons-logging:1.2" />
+          <element id="library" level="project" name="Gradle: org.hamcrest:hamcrest-core:1.3" />
+          <element id="library" level="project" name="Gradle: net.java.dev.jna:jna:4.1.0" />
+          <element id="library" level="project" name="Gradle: junit:junit:4.12" />
+          <element id="library" level="project" name="Gradle: xalan:xalan:2.7.2" />
+          <element id="library" level="project" name="Gradle: org.apache.httpcomponents:httpmime:4.5.2" />
+          <element id="library" level="project" name="Gradle: net.sourceforge.htmlunit:htmlunit-core-js:2.23" />
+          <element id="library" level="project" name="Gradle: net.sourceforge.htmlunit:neko-htmlunit:2.24" />
+          <element id="library" level="project" name="Gradle: net.sourceforge.cssparser:cssparser:0.9.21" />
+          <element id="library" level="project" name="Gradle: commons-io:commons-io:2.5" />
+          <element id="library" level="project" name="Gradle: org.eclipse.jetty.websocket:websocket-client:9.2.20.v20161216" />
+          <element id="library" level="project" name="Gradle: xalan:serializer:2.7.2" />
+          <element id="library" level="project" name="Gradle: xerces:xercesImpl:2.11.0" />
+          <element id="library" level="project" name="Gradle: org.w3c.css:sac:1.3" />
+          <element id="library" level="project" name="Gradle: org.eclipse.jetty:jetty-util:9.2.20.v20161216" />
+          <element id="library" level="project" name="Gradle: org.eclipse.jetty:jetty-io:9.2.20.v20161216" />
+          <element id="library" level="project" name="Gradle: org.eclipse.jetty.websocket:websocket-common:9.2.20.v20161216" />
+          <element id="library" level="project" name="Gradle: xml-apis:xml-apis:1.4.01" />
+          <element id="library" level="project" name="Gradle: org.eclipse.jetty.websocket:websocket-api:9.2.20.v20161216" />
+          <element id="library" level="project" name="Gradle: org.seleniumhq.selenium:selenium-api:3.4.0" />
+          <element id="library" level="project" name="Gradle: org.seleniumhq.selenium:selenium-remote-driver:3.4.0" />
+          <element id="library" level="project" name="Gradle: cglib:cglib-nodep:3.2.4" />
+          <element id="library" level="project" name="Gradle: org.apache.httpcomponents:httpclient:4.5.3" />
+          <element id="library" level="project" name="Gradle: org.apache.commons:commons-lang3:3.5" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.codeborne/phantomjsdriver/1.4.2/124bb0a11ff628b3cebcda7f00bbfbb9204175f5/phantomjsdriver-1.4.2.jar" />
         </element>
       </element>
     </root>

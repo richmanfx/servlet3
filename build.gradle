@@ -26,6 +26,7 @@ dependencies {
     compile 'org.apache.logging.log4j:log4j-core:+'
     compile 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:+'
     compile 'com.fasterxml.jackson.core:jackson-databind:+'
+    compile 'com.codeborne:phantomjsdriver:+'
     testCompile 'org.testng:testng:+'
 }
 

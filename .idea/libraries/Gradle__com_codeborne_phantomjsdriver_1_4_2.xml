@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.codeborne:phantomjsdriver:1.4.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.codeborne/phantomjsdriver/1.4.2/124bb0a11ff628b3cebcda7f00bbfbb9204175f5/phantomjsdriver-1.4.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.codeborne/phantomjsdriver/1.4.2/46be605daa7d9421d596f71aa162c88d550021bb/phantomjsdriver-1.4.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
