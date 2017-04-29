@@ -38,12 +38,12 @@
     <div align="center">
         <table border="1">
         <caption>
-            Информация по квадратам участников соревнований с сайта VHFDX.RU
+            <b>Информация по квадратам участников соревнований с сайта VHFDX.RU</b>
         </caption>
         <tr>
             <th>Позывной</th>
             <th>Квадрат</th>
-            <th>Диапазоны</th>
+            <th colspan="6">Диапазоны</th>
             <th>Дополнительная информация</th>
         </tr>
         <#list tableStrings as tableString>

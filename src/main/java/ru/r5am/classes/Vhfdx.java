@@ -1,7 +1,6 @@
 package ru.r5am.classes;
 
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.ElementsCollection;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -25,13 +24,10 @@ public class Vhfdx {
     public Map<String, Object> vhfdxGrab() throws IOException {
 
         Map<String, Object> pageContext = new HashMap<>();
-        List<String> tableStrings = new LinkedList<>();            // Коллекция строк талицы в темплейте
-
-        Set<OutInfoString> outInfoStringSet = new HashSet<>();
 
         String pageLink = "http://www.vhfdx.ru/component/option,com_fabrik/Itemid,307/";
-        int widthBrowser = 1850;
-        int heightBrowser = 900;
+        int widthBrowser = 1900;
+        int heightBrowser = 950;
 
         Logger log = LogManager.getLogger(Vhfdx.class);
         timeInit(log);
@@ -39,55 +35,172 @@ public class Vhfdx {
 
         browserInitialize(widthBrowser, heightBrowser, log);
 
-        // Открыть страницу
+        // Открыть сайт
         open(pageLink);
 
-        // Позывные
-        ElementsCollection callsElements = $$(By.xpath("//tr[@class='oddrow0 fabrik_row ' or " +
-                                                       "@class='oddrow1 fabrik_row ']" +
-                                                       "/td[contains(@class,'call')]"));
-        // Квадраты
-        ElementsCollection qraElements = $$(By.xpath("//tr[@class='oddrow0 fabrik_row ' or " +
-                                                       "@class='oddrow1 fabrik_row ']" +
-                                                       "/td[contains(@class,'qra')]"));
-        // Диапазоны
-        ElementsCollection bandsElements = $$(By.xpath("//tr[@class='oddrow0 fabrik_row ' or " +
-                                                       "@class='oddrow1 fabrik_row ']" +
-                                                       "/td[contains(@class,'band')]"));
-        // Дополнительная информация
-        ElementsCollection infoElements = $$(By.xpath("//tr[@class='oddrow0 fabrik_row ' or " +
-                                                       "@class='oddrow1 fabrik_row ']" +
-                                                       "/td[contains(@class,'info')]"));
+        // Отсортировать по позывному
+        $(By.xpath("//th/a[@id='farbikOrder_jos_fabrik_formdata_30.call']")).click();
 
-        // В массивы
-        String[] callsArray = callsElements.texts().toArray(new String[0]);
-        String[] qraArray = qraElements.texts().toArray(new String[0]);
-        String[] bandsArray = bandsElements.texts().toArray(new String[0]);
-        String[] infoArray = infoElements.texts().toArray(new String[0]);
+        List<String> overallResult = new ArrayList<>();     // Все строки с позывными со всех страниц
 
-        // Преобразовать в заглавные буквы
-        String[] callsArrayUpCase = Arrays.stream(callsArray).map(String::toUpperCase).toArray(String[]::new);
-        String[] qraArrayUpCase = Arrays.stream(qraArray).map(String::toUpperCase).toArray(String[]::new);
+        while(true) {
+            // Считать данные со страницы
+            String[] strings = readDateFromPage();
+
+            // Добавить к общему результату
+            for (String str : strings) {
+                if (str != null)
+                    overallResult.add(str);
+                else
+                    break;
+            }
+
+            // Перейти на следующую страницу если есть ссылка
+            if($(By.xpath("//a[@class='pagenav' and @title='Следующая']")).exists()) {
+                $(By.xpath("//a[@class='pagenav' and @title='Следующая']")).click();
+            } else {
+                break;
+            }
+
+        }
+
+        close();    // Зкрыть браузер
+
+
+        /// Обработка результов
+
+        // Генерация матрицы диапазонов
+        List<String> stringWithBandMatrix = makeBandMatrix(overallResult);
+
+        // Вычисление расстояния
+
+        // Вычисление азимута
+
+        // Вычисление обратного азимута
 
 
 
-        close();
+        // Данные для темплейта
+        List<String> outputInTemplate = new LinkedList<>();
+        for(String str: stringWithBandMatrix) {
+            str = str.replace("||", "</td><td>");
+            str = "<tr><td>" + str + "</td></tr>";
+            outputInTemplate.add(str);
+        }
 
-        for (int i=0; i<callsElements.size(); i++) {
-            outInfoStringSet.add(new OutInfoString(
-                    callsArrayUpCase[i],
-                    qraArrayUpCase[i],
-                    bandsArray[i],
-                    infoArray[i])
+        pageContext.put("tableStrings", outputInTemplate);
+        return pageContext;
+    }
+
+    /**
+     *
+     * @param overallResult Коллекция строк с сайта с разделителем полей
+     * @return Новая коллекция строк с матрицей диапазонов
+     */
+    private List<String> makeBandMatrix(List<String> overallResult) {
+
+        List<String> outputStringWithBandMatrix = new LinkedList<>();
+
+        for(String str: overallResult) {
+
+            String bandString = "";
+            // Парсим диапазоны
+            String bands = str.split("\\|\\|")[2];
+            String info;
+            try {       // Если ячейка с 'Дополнительной информацией' пуста
+                info = str.split("\\|\\|")[3];
+            } catch (ArrayIndexOutOfBoundsException ex) {
+                info = "-&nbsp;-&nbsp;-";
+            }
+
+            if(bands.contains("144МГц"))
+                bandString += "2м";
+            else
+                bandString += "-&nbsp;-&nbsp;-";
+
+            if (bands.contains("432МГц"))
+                bandString += "||70см";
+            else
+                bandString += "||-&nbsp;-&nbsp;-";
+
+            if (bands.contains("1296МГц"))
+                bandString += "||23см";
+            else
+                bandString += "||-&nbsp;-&nbsp;-";
+
+            if (bands.contains("5.7ГГц"))
+                bandString += "||5см";
+            else
+                bandString += "||-&nbsp;-&nbsp;-";
+
+            if (bands.contains("10ГГц"))
+                bandString += "||3см";
+            else
+                bandString += "||-&nbsp;-&nbsp;-";
+
+            if (bands.contains("24ГГц"))
+                bandString += "||1.2см";
+            else
+                bandString += "||-&nbsp;-&nbsp;-";
+
+            outputStringWithBandMatrix.add(
+                    str.split("\\|\\|")[0]  +
+                    "||" + str.split("\\|\\|")[1] +
+                    "||" + bandString +
+                    "||" + info
             );
         }
+        return outputStringWithBandMatrix;
+    }
 
-        for (OutInfoString ois: outInfoStringSet) {
-            tableStrings.add(ois.get());
+
+    /**
+     * Считывает данные участников со страницы сайта
+     */
+    private String[] readDateFromPage() {
+
+        // Количество позывных на странице
+        String callCountOnPage = $(By.xpath("//td[contains(text(),'Всего')]")).text().split(" ")[3];
+        System.out.printf("Позывных на странице: %s\n", callCountOnPage);
+
+        // Позывные
+        String[] calls = $$(By.xpath("//tr[@class='oddrow0 fabrik_row ' or " +
+                                                       "@class='oddrow1 fabrik_row ']" +
+                                                       "/td[contains(@class,'call')]")).texts().toArray(new String[0]);
+        // Квадраты
+        String[] qra = $$(By.xpath("//tr[@class='oddrow0 fabrik_row ' or " +
+                                                       "@class='oddrow1 fabrik_row ']" +
+                                                       "/td[contains(@class,'qra')]")).texts().toArray(new String[0]);
+        // Диапазоны
+        String[] bands = $$(By.xpath("//tr[@class='oddrow0 fabrik_row ' or " +
+                                                       "@class='oddrow1 fabrik_row ']" +
+                                                       "/td[contains(@class,'band')]")).texts().toArray(new String[0]);
+        // Дополнительная информация
+        String[] info = $$(By.xpath("//tr[@class='oddrow0 fabrik_row ' or " +
+                                                       "@class='oddrow1 fabrik_row ']" +
+                                                       "/td[contains(@class,'info')]")).texts().toArray(new String[0]);
+
+        // Преобразовать в заглавные буквы позывные и квадраты
+        String[] callsArrayUpCase = Arrays.stream(calls).map(String::toUpperCase).toArray(String[]::new);
+        String[] qraArrayUpCase = Arrays.stream(qra).map(String::toUpperCase).toArray(String[]::new);
+
+        // Удалить пробелы из позывных
+        String[] callsArrayUpCaseNoSpaces = Arrays.stream(callsArrayUpCase)
+                .map(s -> s.replaceAll(" ", ""))
+                .toArray(String[]::new);
+
+        String[] stringFromPage = new String[100];
+        for (int i=0; i<calls.length; i++) {
+            
+             stringFromPage[i] = String.format("%s||%s||%s||%s",
+                    callsArrayUpCaseNoSpaces[i],
+                    qraArrayUpCase[i],
+                    bands[i],
+                    info[i]
+             );
         }
 
-        pageContext.put("tableStrings", tableStrings);
-        return pageContext;
+        return stringFromPage;
     }
 
     /**
@@ -120,10 +233,10 @@ public class Vhfdx {
         }
 
 
-
-
         Configuration.browserSize = String.format("%dx%d", width, height);
-        Configuration.browser = "phantomjs";
+//        Configuration.browser = "phantomjs";
+        Configuration.browser = "chrome";
+
     }
 
 
